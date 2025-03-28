@@ -1,0 +1,205 @@
+/* General Styles */
+:root {
+    --primary-color: #6a11cb; /* Purple */
+    --secondary-color: #2575fc; /* Blue */
+    --button-color: #4CAF50; /* Green */
+    --button-hover-color: #45a049; /* Dark Green */
+    --background-color: #ffcc00; /* Yellow */
+    --text-color: #333; /* Dark Gray */
+    --container-background: #fff; /* White */
+    --header-background: #6a11cb; /* Purple */
+    --header-text-color: white; /* White */
+    --table-header-background: #f2f2f2; /* Light Gray */
+    --table-border-color: #ddd; /* Light Gray */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Container Styles */
+.container {
+    background: var(--container-background);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 100px; /* Space for fixed header */
+}
+
+/* Header Styles */
+header {
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--table-border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+/* Link Styles */
+a {
+    color: var(--button-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--button-hover-color);
+    text-decoration: underline;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid var(--table-border-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--table-header-background);
+    color: var(--text-color);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --background-color: #1e1e1e; /* Dark Gray */
+    --text-color: #f4f4f4; /* Light Gray */
+    --container-background: #2d2d2d; /* Darker Gray */
+    --header-background: var(--secondary-color); /* Blue */
+    --table-header-background: #333; /* Dark Gray */
+    --table-border-color: #444; /* Darker Gray */
+}
+
+body.dark-mode h1 {
+    color: var(--primary-color);
+}
+
+body.dark-mode button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode button:hover {
+    background-color: var(--secondary-color);
+}
+
+body.dark-mode a {
+    color: var(--primary-color);
+}
+
+body.dark-mode a:hover {
+    color: var(--secondary-color);
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.shadow {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    header {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
